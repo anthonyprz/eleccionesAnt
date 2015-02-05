@@ -1,12 +1,20 @@
 package elecciones;
 
-public abstract class EspacioPublico {
-	private int id;
+import java.util.Scanner;
+
+public  class EspacioPublico {
+	
+	protected int id;
+	protected String direccion;
+	protected String poblacion;
+	
 	private String nombre;
 	private String tipo;
-	private String direccion;
-	private String poblacion;
 	private int metros;
+	
+	String cadena;
+	int num;
+	Scanner sc = new Scanner(System.in);
 	
 
 	public EspacioPublico(){}
@@ -52,5 +60,35 @@ public abstract class EspacioPublico {
 	}
 	public int getMetros(){
 		return metros;
+	}
+	protected void crearEspacioPublico(){
+		
+		System.out.print("\nID del espacio publico: ");
+		num = sc.nextInt();
+		setId(num);
+		System.out.print("\nNombre del espacio publico: ");
+		cadena = sc.next();
+		setNombre(cadena);
+		System.out.print("\nTipo de espacio publico: ");
+		cadena = sc.next();
+		setTipo(cadena);				
+		System.out.print("\nLa direccion del espacio publico: ");
+		cadena = sc.next();
+		setDireccion(cadena);
+		System.out.print("\nLa poblacion del espacio publico: ");
+		cadena = sc.next();
+		setPoblacion(cadena);
+		System.out.print("\nMetros del espacio publico: ");
+		num = sc.nextInt();
+		setMetros(num);
+
+		System.out.println("\n-----------Informacion del espacio publico-----------");
+		System.out.println("El ID del espacio publico es: " + getId()+ "");
+		System.out.println("El nombre del espacio publico es: " + getNombre()+ "");
+		System.out.println("El tipo del espacio publico es: " + getTipo()+ "");
+		System.out.println("La direccion del espacio publico es: " + getDireccion()+ "");
+		System.out.println("La poblacion del espacio publico es: " + getPoblacion()+ "");
+		System.out.println("Los metros del espacio publico es: " + getMetros()+ "\n");
+		
 	}
 }

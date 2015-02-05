@@ -6,24 +6,24 @@ public class Main {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 		int eleccion=0;
+		Partido partido = new Partido();
 
 		do
 		{
-			System.out.print("\n\nMENU:");
-			System.out.print("\n1.Añadir un habitante");
-			System.out.print("\n2.Añadir un inmueble");
-			System.out.print("\n3.Añadir un espacio publico");
-			System.out.print("\n4.Añadir un ayuntamiento");
-			System.out.print("\n5.Añadir un partido politico");
-			System.out.print("\n6.Leer lista de partidos politicos");
-			System.out.print("\n7.Leer lista de censo");
-			System.out.print("\n8.SALIR");
+			System.out.println("\n1.Añadir un habitante");
+			System.out.println("2.Añadir un inmueble");
+			System.out.println("3.Añadir un espacio publico");
+			System.out.println("4.Añadir un ayuntamiento");
+			System.out.println("5.Añadir un partido politico");
+			System.out.println("6.Leer lista de partidos politicos");
+			System.out.println("7.Leer lista de censo");
+			System.out.println("8.SALIR");
 
-			System.out.println("\nIntroduce el numero de la accion que quieres realizar: ");
+			System.out.println("¿que quieres realizar?: ");
 
 			eleccion=sc.nextInt();	
 			
-			System.out.println("****************************************************************");
+			System.out.println("________________________________________________");
 			
 			switch (eleccion) {
 				case 1:
@@ -38,9 +38,39 @@ public class Main {
 					inmueble.crearInmueble();
 					break;
 				}
+				case 3:
+				{
+					EspacioPublico espaciopu = new EspacioPublico();
+					espaciopu.crearEspacioPublico();
+					break;
+				}
+				case 4:
+				{
+					Ayuntamiento ayunta = new Ayuntamiento();
+					ayunta.crearAyuntamiento();
+					break;
+				}
+				case 5:
+				{
+				
+					partido.crearPartido();
+					break;
+				}
+				case 6:
+				{
+					partido.leerMostar();
+					break;
+				}
+				case 7:
+				{
+					Censo censo = new Censo();
+					censo.crearCenso();
+					break;
+				}
 			
 			}
 		}while(eleccion != 8);
+		sc.close();
 		
 	}
 

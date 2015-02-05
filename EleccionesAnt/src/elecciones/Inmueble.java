@@ -67,7 +67,7 @@ public class Inmueble  {
 			num = sc.nextInt();
 			setMetros(num);
 			
-			System.out.println("-----------Informacion del habitante-----------");
+			System.out.println("-----------Informacion del inmueble-----------");
 			System.out.println("El ID del inmueble es: " + getId()+ "");
 			System.out.println("El tipo de inmueble es: " + getTipo()+ "");
 			System.out.println("La dirrecion del inmueble es: " + getDireccion()+ "");
